@@ -2,6 +2,7 @@
 using System.Linq;                //查詢
 using System.Collections;  //協程
 using System.Collections.Generic; //List
+using UnityEngine.SceneManagement;
 
 //在編輯模式就可以執行 不用每次都按執行才會跑 
 [ExecuteInEditMode]
@@ -168,6 +169,21 @@ public class CardSystem : MonoBehaviour
             child.position = new Vector3((x - 6) * 1.3f, 4 - y * 2, 0);
 
             yield return null;
+        }
+    }
+
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene("第5題");
+        }
+
+        if (Input.GetKeyDown("o"))
+        {
+            SceneManager.LoadScene("第2題");
         }
     }
 

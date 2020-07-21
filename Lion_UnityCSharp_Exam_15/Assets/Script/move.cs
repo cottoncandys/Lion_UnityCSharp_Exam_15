@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class move : MonoBehaviour
 {
@@ -15,6 +16,16 @@ public class move : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime, maxSpeed);
+
+        if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene("第2題");
+        }
+
+        if (Input.GetKeyDown("o"))
+        {
+            SceneManager.LoadScene("第1題");
+        }
     }
 }
 

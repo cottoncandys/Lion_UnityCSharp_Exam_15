@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Linq;                
 using System.Collections;  
-using System.Collections.Generic; 
-
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [ExecuteInEditMode]
 public class gift : MonoBehaviour
@@ -106,6 +106,24 @@ public class gift : MonoBehaviour
             child.position = new Vector3((x - 5) * 0.8f, 5 - y * 1, 0);
 
             yield return transform.GetChild(1);
+        }
+    }
+
+
+
+
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown("p"))
+        {
+            SceneManager.LoadScene("第5題");
+        }
+
+        if (Input.GetKeyDown("o"))
+        {
+            SceneManager.LoadScene("第1題");
         }
     }
 
